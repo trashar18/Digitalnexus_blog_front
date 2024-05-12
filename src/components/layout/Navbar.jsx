@@ -13,7 +13,7 @@ const Navbar = () => {
     setShow(!show);
   };
   
-  const isDashboard = useLocation("http://localhost:5173/dashboard");
+  const isDashboard = useLocation("https://digitalnexus-blog-back.onrender.com/dashboard");
   const { mode, setMode, isAuthenticated, user, setIsAuthenticated } = useContext(Context);
   const navigateTo = useNavigate();
 
@@ -21,7 +21,7 @@ const Navbar = () => {
     e.preventDefault();
     try {
       const { data } = await axios.get(
-        "http://localhost:4000/api/v1/user/logout",
+        "https://digitalnexus-blog-back.onrender.com/api/v1/user/logout",
         { withCredentials: true }
       );
       setIsAuthenticated(false);
